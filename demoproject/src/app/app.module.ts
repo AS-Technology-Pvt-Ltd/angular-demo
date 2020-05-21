@@ -10,6 +10,10 @@ import { AboutComponent } from './about/about.component';
 import { LogicComponent } from './logic/logic.component';
 import { ClassstylebindingComponent } from './classstylebinding/classstylebinding.component';
 import { EventbindingComponent } from './eventbinding/eventbinding.component';
+import { DirectivesComponent } from './directives/directives.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DemobootstrapComponent } from './demobootstrap/demobootstrap.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -21,8 +25,15 @@ import { EventbindingComponent } from './eventbinding/eventbinding.component';
     LogicComponent,
     ClassstylebindingComponent,
     EventbindingComponent,
+    DirectivesComponent,
+    DemobootstrapComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,7 @@
+<button (click)="toggle()">Toggle</button>
+
+<p *ngIf="isActive; else show">directives works!</p>
+
+<ng-template #show>
+  <div>Hello</div>
+</ng-template>

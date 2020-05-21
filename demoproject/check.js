@@ -20,3 +20,8 @@ let x = ages.find((item, i) => {
 // });
 
 console.log(x);
+
+const u = "sachin";
+let y = u.split("").reverse().join("", ",");
+
+console.log(y);
