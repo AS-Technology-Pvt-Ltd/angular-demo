@@ -1,0 +1,33 @@
+<p>pushsplice works!</p>
+<div class="row">
+  <div class="col-md-6 col-sm-6">
+    <input
+      class="form-control"
+      name="data"
+      id="data"
+      placeholder="enter username"
+      #uName
+    />
+  </div>
+  <div class="col-md-6 col-sm-6">
+    <button class="btn btn-primary" (click)="addUser(uName)">Add</button>
+  </div>
+  <div class="row">
+    <div class="col-md-12 p-1000">
+      <div class="table">
+        <thead>
+          <tr>
+            <th>UserName</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let user of users; index as i">
+            <td>{{ user.name }}</td>
+            <td><button (click)="deleteuser(i)">Delete</button></td>
+          </tr>
+        </tbody>
+      </div>
+    </div>
+  </div>
+</div>

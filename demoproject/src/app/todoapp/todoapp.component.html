@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 col-sm-6">
+      <input type="text" class="form-control" #user />
+    </div>
+    <div class="col-md-6 col-sm-6">
+      <button class="btn btn-success" (click)="addUser(user)">Add</button>
+    </div>
+  </div>
+  <div class="pt-4">GET RECORDS</div>
+  <p>{{ isData ? null : "No Records,Please Add" }}</p>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th>S.No</th>
+        <th>User Name</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of records; index as i">
+        <td>{{ i + 1 }}</td>
+        <td>{{ user.name }}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteUser(i)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
